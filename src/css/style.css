@@ -1,0 +1,109 @@
+:root {
+    --cell-size: 64px;
+    --cell-img: url('../img/goblin.png');
+}
+
+
+* {
+    font-size: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: larger;
+    color: blue;
+}
+
+.score, .miss-score {
+    font-size: larger;
+    font-weight: bold;
+    text-align: center;
+}
+
+.game-field {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    max-width: calc(var(--cell-size) * 4);
+    max-height: calc(var(--cell-size) * 4);
+    border: 1px solid black;
+}
+
+.field-cell {
+    box-sizing: border-box;
+    width: var(--cell-size);
+    height: var(--cell-size);
+    background-image: var(--cell-img);
+    background-size: cover;
+    border: 2px solid black;
+    cursor: url('../img/baseline_hardware_black_24dp.png') 10 10, auto;
+}
+
+.hide {
+    background-image: none;
+    cursor: url('../img/block_FILL0_wght0_GRAD0_opszNaN.png') 10 10, auto;
+}
+
+.warning {
+    color: red;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 300px;
+}
+
+.search {
+    box-sizing: border-box;
+    height: 40px;
+    width: 100%;
+}
+
+.pinned-tasks-container {
+    list-style-type: none;
+    padding-inline-start: 0;
+}
+
+.all-tasks-container {
+    list-style-type: none;
+    padding-inline-start: 0;
+}
+
+.task {
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    padding: 10px 10px 10px 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.task-checkbox {
+    width: 0;
+    height: 0;
+}
+
+.task-checkbox::after {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    top: calc(50% - 10px);
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.task-checkbox:hover::after {
+    box-shadow: 0 0 10px rgb(12, 179, 6);
+    transition: all 0.2s;
+}
+
+.task-checkbox:checked::after {
+    background-image: url('../img/done_FILL0_wght400_GRAD0_opsz24.png');
+    background-position: center;
+}
