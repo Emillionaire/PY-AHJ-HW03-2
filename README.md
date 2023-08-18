@@ -1,1 +1,1 @@
-![CI](https://github.com/Emillionaire/events/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/Emillionaire/PY-AHJ-HW03-2/actions/workflows/ci.yml/badge.svg)
