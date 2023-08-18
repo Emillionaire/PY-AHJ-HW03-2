@@ -2,7 +2,7 @@
   "name": "events",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/Emillionaire/events.git",
+  "repository": "https://github.com/Emillionaire/PY-AHJ-HW03-2.git",
   "license": "MIT",
   "scripts": {
     "start": "webpack serve --mode development",
